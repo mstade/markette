@@ -1,7 +1,7 @@
 Common Infrastructure
 =====================
 
-PHML as a specification relies upon other technologies. In no particular order, this section discusses them
+PHML as a specification relies upon other technologies. This section discussed them, in no particular order.
 
 Unicode
 -------
