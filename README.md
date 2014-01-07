@@ -3,6 +3,20 @@ phml
 
 Plain Hypermedia Markup Language – extensible plain text hypermedia format with human friendly features for structure and markup.
 
+Outline
+-------
+
+1. [Introduction](spec/introduction.md)
+2. [Common Infrastructure](spec/infrastructure.md)
+3. [Semantics & Structure](spec/semantics.md)
+4. [Elements](spec/elements.md)
+5. [Profiles](spec/profiles.md)
+6. [Syntax](spec/syntax.md)
+7. [Compatibility](spec/compatibility.md)
+8. [Security Considerations](spec/security.md)
+9. [IANA Considerations](spec/iana.md)
+10. [License & Copyright Notice](LICENSE)
+
 Contributing
 ------------
 
