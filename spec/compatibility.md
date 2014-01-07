@@ -67,9 +67,7 @@ However, this syntax introduces some awkward ambiguities. For instance, consider
 
 In this example, [Markdown] would correctly consider the code block to be part of the first list item. However, it wouldn't recognize it as code, but rather as normal text. In order to be correctly recognized as code, it would have to be indented *twice*.
 
-PHML resolves this by only recognizing [Markdown] pre-formatted code blocks at a non-indented level. This means that any block of text that is considered part of a list or other non-sectioning content, should not be considered verbatim. This means the previous example will actually be parsed just as in [Markdown] – as a regular paragraph.
-
-PHML supports verbatim blocks just like [Markdown], by prefixing four space (U+0020) characters or one tab (U+0009) character; however, that syntax is not recommended. Instead, PHML supports the use of a "fenced" block using three backtick (U+0060) characters.
+PHML resolves this by only recognizing [Markdown] pre-formatted code blocks at a non-indented level. This means that any block of text that is considered part of a list or other non-sectioning content, should not be considered verbatim. The aforementioned example will actually be parsed just as in [Markdown] – as a regular paragraph. PHML supports verbatim blocks just like [Markdown], by prefixing four space (U+0020) characters or one tab (U+0009) character; however, that syntax is not recommended. Instead, PHML supports the use of a "fenced" block using three backtick (U+0060) characters.
 
 Another important distinction between PHML and [Markdown] is that PHML does not automatically assume that text is code. For more information, please refer to the [verbatim] documentation.
 
