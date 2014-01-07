@@ -12,16 +12,18 @@ Sections
 Phrasing
 --------
 
-### Blocks
-#### Paragraphs
-#### Lists
-#### Verbatim
-#### Tables
-#### Forms
-### Inline
-#### Runs
-#### Verbatim
-#### Links
+### Paragraphs
+#### Emphasis
+### Quotes
+### Lists
+#### Numbers
+#### Bullets
+#### Tasks
+### Verbatim
+#### Code
+### Tables
+### Links
+### Forms
 
 Hypermedia
 ----------

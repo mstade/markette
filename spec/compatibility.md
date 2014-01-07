@@ -8,7 +8,8 @@ This section is dedicated to documenting these issues and how PHML resolves them
 [Markdown]: daringfireball.net/projects/markdown/
 [POLS]: http://en.wikipedia.org/wiki/Principle_of_least_astonishment
 
-### Newlines
+Newlines
+--------
 
 [Markdown] declares that in order to force a line break, a line must end with two or more [whitespace characters] and a single line feed (U+000a). This means that any line that just ends with a single line feed (U+000a) should not be considered a hard line break. This is unintuitive since in the original plain text source is in fact a hard line break, but a parser should ignore it.
 
@@ -21,9 +22,10 @@ Violets are blue.
 
 In PHML, the line break is recognized as intentional and tooling must respect it.
 
-### Emphasis
+Emphasis
+--------
 
-[Markdown] defines emphasis as text surrounded by asterisks (U+002a) or underscores (U+005f). In the following example, the word `during` is emphasized using asterisks and underscores:
+[Markdown] defines emphasis as text surrounded by asterisks (U+002a) or underscores (U+005f), as shown in this example:
 
 ```
 They were talking *during* the movie.
@@ -44,8 +46,31 @@ They were talking during the movie? Un*frigging* believable.
 They were talking during the movie? Un_frigging_ believable.
 ```
 
-There may well exist reasons why one would like to put emphasis in the middle of a word – dramatic effect in prose, for instance. However, it doesn't read well and it introduces ambiguities when dealing with text that makes legitimate use of these characters. Therefore, PHML does *not* support intra-word emphasis.
+There may well exist reasons why one would like to put emphasis in the middle of a word – dramatic effect in prose, for instance. However, it doesn't read well and it introduces ambiguities when dealing with text that makes legitimate use of these characters. Therefore, PHML does *not* support intra-word emphasis. For more information, please refer to the documentation on [emphasis].
 
-### Verbatim Text
+[emphasis]: elements.md#emphasis
 
-[Markdown] has syntax for pre-formatted code blocks, which is indented by four spaces or one tab character. It also has support for pre-formatted code inline, which is defined as text wrapped by backtick (U+0060) characters.
+Verbatim Text
+-------------
+
+[Markdown] has syntax for pre-formatted code blocks, which is indented by four space (U+0020) characters or one tab (U+0009) character. It also has support for pre-formatted code inline, which is defined as text wrapped by backtick (U+0060) characters.
+
+However, this syntax introduces some awkward ambiguities. For instance, consider a list with a code sample:
+
+```
+1. Squaring numbers in JavaScript:
+
+    [1, 2, 3, 4].map(function(n) { return n * n })
+
+2. Some other list item.
+```
+
+In this example, [Markdown] would correctly consider the code block to be part of the first list item. However, it wouldn't recognize it as code, but rather as normal text. In order to be correctly recognized as code, it would have to be indented *twice*.
+
+PHML resolves this by only recognizing [Markdown] pre-formatted code blocks at a non-indented level. This means that any block of text that is considered part of a list or other non-sectioning content, should not be considered verbatim. This means the previous example will actually be parsed just as in [Markdown] – as a regular paragraph.
+
+PHML supports verbatim blocks just like [Markdown], by prefixing four space (U+0020) characters or one tab (U+0009) character; however, that syntax is not recommended. Instead, PHML supports the use of a "fenced" block using three backtick (U+0060) characters.
+
+Another important distinction between PHML and [Markdown] is that PHML does not automatically assume that text is code. For more information, please refer to the [verbatim] documentation.
+
+[verbatim]: elements.md#verbatim
