@@ -12,7 +12,7 @@ Whitespace plays a central role in documents and element syntax. Whenever this s
 
 There are two kinds of line breaks: hard and soft. Hard line breaks define a position in the text where one line ends and the next one starts, unequivocally. Soft line breaks define a position where there is an opportunity to introduce a line break, according to some predefined rules.
 
-PHML does *not* define any soft break rules or syntax, and it is recommended that processors use the [Unicode line breaking algorithm][UAX14] as reference for implementing soft breaks.
+Markette does *not* define any soft break rules or syntax, and it is recommended that processors use the [Unicode line breaking algorithm][UAX14] as reference for implementing soft breaks.
 
 Processors should recognize the following characters, or character sequences, as hard breaks:
 
@@ -44,7 +44,7 @@ Processors should follow the [Unicode recommendations][UAX14] when deciding whet
 
 ### Indenting
 
-Indenting in PHML should be done using `SPACE U+0020` characters, and an indent level should be two `SPACE U+0020` characters. All non-breaking whitespace characters at the start of a line should be converted into `SPACE U+0020` characters; except for `HORIZONTAL TABULATION U+0009` characters which should be converted into two `SPACE U+0020` characters.
+Indenting in Markette should be done using `SPACE U+0020` characters, and an indent level should be two `SPACE U+0020` characters. All non-breaking whitespace characters at the start of a line should be converted into `SPACE U+0020` characters; except for `HORIZONTAL TABULATION U+0009` characters which should be converted into two `SPACE U+0020` characters.
 
 The indentation level is determined by counting all non-breaking whitespace characters at the start of a line; dividing the count by two; and rounding the result downwards to the nearest integer.
 

@@ -1,4 +1,4 @@
-Semantics & Structure
+wSemantics & Structure
 =====================
 
 All elements have some sort of predefined meaning. A list for example, describes the semantics of a sequence of items; an ordered list expands on this concept by stating that the sequence order matters. This kind of semantics is called lexical semantics; it is the study of what the words (i.e. elements) of a language mean.
@@ -13,16 +13,16 @@ This specification only defines element semantics; however, it is recommended th
 Internationalization & Bidirectional Content
 --------------------------------------------
 
-The PHML syntax is designed to be language neutral. This means that it should be possible to author documents in any language, and processors should still be able to parse them. Documents where the character encoding is unicode should conform to the [Unicode BiDi Algorithm][BiDi].
+The Markette syntax is designed to be language neutral. This means that it should be possible to author documents in any language, and processors should still be able to parse them. Documents where the character encoding is unicode should conform to the [Unicode BiDi Algorithm][BiDi].
 
 [BiDi]: http://unicode.org/standard/reports/tr9/
 
 Documents
 ---------
 
-Any stream of bytes that can be interpreted as text is a valid PHML document.
+Any stream of bytes that can be interpreted as text is a valid Markette document.
 
-Processors may choose any method they see fit to internally represent a document, such as a [DOM], but are required to preserve all of the document's semantics. As well, processors may use whatever valid PHML syntax they like when [serializing] documents, but must preserve the semantics when doing so.
+Processors may choose any method they see fit to internally represent a document, such as a [DOM], but are required to preserve all of the document's semantics. As well, processors may use whatever valid Markette syntax they like when [serializing] documents, but must preserve the semantics when doing so.
 
 [DOM]: http://dom.spec.whatwg.org/
 [serializing]: syntax.md#serializing

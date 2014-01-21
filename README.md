@@ -1,7 +1,7 @@
-phml
-====
+Markette
+========
 
-Plain Hypermedia Markup Language – extensible plain text hypermedia format with human friendly features for structure and markup.
+Deliciously minimalistic markup language – turning plain text to semantic goodness, one word at time.
 
 Outline
 -------

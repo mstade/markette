@@ -1,9 +1,9 @@
 Compatibility
 ============
 
-One of the goals of PHML is to obsolete [Markdown], by providing backwards compatibility with [Markdown] wherever possible. There exists some situations however, where ambiguities or flaws of [Markdown] cause problems. In this case, PHML draws a line in the sand, adhering to the [principle of least surprise][POLS]. This means issues are resolved in an unambiguous and intuitive manner.
+One of the goals of Markette is to obsolete [Markdown], by providing backwards compatibility with [Markdown] wherever possible. There exists some situations however, where ambiguities or flaws of [Markdown] cause problems. In this case, Markette draws a line in the sand, adhering to the [principle of least surprise][POLS]. This means issues are resolved in an unambiguous and intuitive manner.
 
-This section is dedicated to documenting these issues and how PHML resolves them.
+This section is dedicated to documenting these issues and how Markette resolves them.
 
 [Markdown]: daringfireball.net/projects/markdown/
 [POLS]: http://en.wikipedia.org/wiki/Principle_of_least_astonishment
@@ -20,7 +20,7 @@ Roses are red,
 Violets are blue.
 ```
 
-In PHML, the line break is recognized as intentional and tooling must respect it.
+In Markette, the line break is recognized as intentional and tooling must respect it.
 
 Emphasis
 --------
@@ -46,7 +46,7 @@ They were talking during the movie? Un*frigging* believable.
 They were talking during the movie? Un_frigging_ believable.
 ```
 
-There may well exist reasons why one would like to put emphasis in the middle of a word – dramatic effect in prose, for instance. However, it doesn't read well and it introduces ambiguities when dealing with text that makes legitimate use of these characters. Therefore, PHML does *not* support intra-word emphasis. For more information, please refer to the documentation on [emphasis].
+There may well exist reasons why one would like to put emphasis in the middle of a word – dramatic effect in prose, for instance. However, it doesn't read well and it introduces ambiguities when dealing with text that makes legitimate use of these characters. Therefore, Markette does *not* support intra-word emphasis. For more information, please refer to the documentation on [emphasis].
 
 [emphasis]: elements.md#emphasis
 
@@ -67,13 +67,13 @@ However, this syntax introduces some awkward ambiguities. For instance, consider
 
 In this example, [Markdown] would correctly consider the code block to be part of the first list item. However, it wouldn't recognize it as code, but rather as normal text. In order to be correctly recognized as code, it would have to be indented *twice*.
 
-PHML resolves this by only recognizing [Markdown] pre-formatted code blocks at a non-indented level. This means that any block of text that is considered part of a list or other non-sectioning content, should not be considered verbatim. The aforementioned example will actually be parsed just as in [Markdown] – as a regular paragraph. PHML supports verbatim blocks just like [Markdown], by prefixing four space (U+0020) characters or one tab (U+0009) character; however, that syntax is not recommended. Instead, PHML supports the use of a "fenced" block using three backtick (U+0060) characters.
+Markette resolves this by only recognizing [Markdown] pre-formatted code blocks at a non-indented level. This means that any block of text that is considered part of a list or other non-sectioning content, should not be considered verbatim. The aforementioned example will actually be parsed just as in [Markdown] – as a regular paragraph. Markette supports verbatim blocks just like [Markdown], by prefixing four space (U+0020) characters or one tab (U+0009) character; however, that syntax is not recommended. Instead, Markette supports the use of a "fenced" block using three backtick (U+0060) characters.
 
-Another important distinction between PHML and [Markdown] is that PHML does not automatically assume that text is code. For more information, please refer to the [verbatim] documentation.
+Another important distinction between Markette and [Markdown] is that Markette does not automatically assume that text is code. For more information, please refer to the [verbatim] documentation.
 
 [verbatim]: elements.md#verbatim
 
 HTML
 ----
 
-[Markdown] supports HTML, in that any HTML blocks should be preserved as-is. PHML does *not* support the use of HTML.
+[Markdown] supports HTML, in that any HTML blocks should be preserved as-is. Markette does *not* support the use of HTML.

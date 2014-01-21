@@ -3,7 +3,7 @@ Introduction
 
 [Markdown] has grown to be a de facto standard of [lightweight markup languages][lightmarkup]. However as a specification it is lacking in clarity, which leads to misinterpretations or ambiguities that can't be resolved. There is a reference implementation, but there is no comprehensive test suite meaning there are numerous conflicting implementations of [Markdown] tooling in the wild.
 
-PHML aims to solve this by providing a (mostly) backwards compatible syntax, while removing ambiguities and providing comprehensive tests to ensure consistent interpretation of content.
+Markette aims to solve this by providing a (mostly) backwards compatible syntax, while removing ambiguities and providing comprehensive tests to ensure consistent interpretation of content.
 
 [Markdown]: http://daringfireball.net/projects/markdown/
 [lightmarkup]: http://en.wikipedia.org/wiki/Lightweight_markup_language
@@ -51,15 +51,15 @@ Whitespace plays a central role in documents and element syntax. Whenever this s
 
 Reader:
 
-  Anyone reading PHML documents. The reader may be human or machine; a distinction isn't made in this specification unless explicity noted.
+  Anyone reading Markette documents. The reader may be human or machine; a distinction isn't made in this specification unless explicity noted.
 
 Writer:
 
-  Anyone writing PHML documents. Like readers, a writer may be human or machine.
+  Anyone writing Markette documents. Like readers, a writer may be human or machine.
 
 Processor:
 
-  Software designed to work with PHML documents in some way; e.g. parsers and serializers.
+  Software designed to work with Markette documents in some way; e.g. parsers and serializers.
 
 [BiDi]: http://unicode.org/standard/reports/tr9/
 [Encoding Standard]: http://encoding.spec.whatwg.org/
