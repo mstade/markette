@@ -72,3 +72,8 @@ PHML resolves this by only recognizing [Markdown] pre-formatted code blocks at a
 Another important distinction between PHML and [Markdown] is that PHML does not automatically assume that text is code. For more information, please refer to the [verbatim] documentation.
 
 [verbatim]: elements.md#verbatim
+
+HTML
+----
+
+[Markdown] supports HTML, in that any HTML blocks should be preserved as-is. PHML does *not* support the use of HTML.
