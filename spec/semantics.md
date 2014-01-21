@@ -1,4 +1,4 @@
-wSemantics & Structure
+Semantics & Structure
 =====================
 
 All elements have some sort of predefined meaning. A list for example, describes the semantics of a sequence of items; an ordered list expands on this concept by stating that the sequence order matters. This kind of semantics is called lexical semantics; it is the study of what the words (i.e. elements) of a language mean.
@@ -62,7 +62,7 @@ Some sections are sectioning roots, meaning they define their own outline withou
 
 ### Heading
 
-Heading content is used to name sections. In case a header element is the first element in a sectioning root, it defines the name of the root itself. Otherwise, it implicitly defines the start of a new section.
+Heading content is used to name sections, as well as create a scope for content following it. In case a header element is the first element in a sectioning root, it also defines the name of the root. There are different levels of priority for heading content, which determines if and how the sections they create are nested.
 
 Heading content affect the [document outline]. [Profiles] may take advantage of section names in order to define additional semantics.
 
@@ -72,9 +72,9 @@ Phrasing content are runs of text, that together form the contents of flow eleme
 
 ### Hypermedia
 
-Hypermedia content define links between content. Hypermedia elements support one or more [H Factors], which helps describe the capabilities of an element.
+Hypermedia content define links between content. Links have different features, which are described using [H Factors]. They explain how the links operate, and how a reader should relate to them. Hypermedia is very useful. It can be used to link to footnotes, embed images in documents, or provide important clues to document processors.
 
-Hypermedia is very useful. It can be used to link to footnotes, embed images in documents, or provide important clues to document processors.
+Unless otherwise noted, readers should assume that hypermedia elements use URLs to indicate the location of the linked resources.
 
 [H Factors]: http://amundsen.com/hypermedia/hfactor/
 
