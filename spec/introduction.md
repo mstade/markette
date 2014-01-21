@@ -45,6 +45,21 @@ Terminology
 
 Some terms used in this specification are defined in the [Encoding Standard].
 
-Unicode code points are represented as a four-to-six digit hexadecimal number, typically prefixed with "U+". In some instances, such as indexing, code points are prefixed with "0x".
+Unicode code points are represented as a four-to-six digit hexadecimal number, typically prefixed with `U+`. In some instances, such as indexing, code points are prefixed with `0x`. Sequences of code points are separated by whitespace.
 
+Whitespace plays a central role in documents and element syntax. Whenever this specification uses the term `non-breaking whitespace` (NBSP), characters that affect the [Unicode Bidirectional (BiDi) Algorithm][BiDi] as well as other zero-width non-breaking whitespace characters should be excluded from the set. Zero-width non-breaking whitespace (ZWNBSP) should only be included if explicitly noted.
+
+Reader:
+
+  Anyone reading PHML documents. The reader may be human or machine; a distinction isn't made in this specification unless explicity noted.
+
+Writer:
+
+  Anyone writing PHML documents. Like readers, a writer may be human or machine.
+
+Processor:
+
+  Software designed to work with PHML documents in some way; e.g. parsers and serializers.
+
+[BiDi]: http://unicode.org/standard/reports/tr9/
 [Encoding Standard]: http://encoding.spec.whatwg.org/
