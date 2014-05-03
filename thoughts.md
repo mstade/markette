@@ -1,11 +1,11 @@
-﻿Features
+Features
 ========
 
 Readability; ease of authoring.
 
 Intuitive syntax.
 
-Subset compatible with GitHub Flavored Markdown ([GFM]). Some features, such as extended link attributes, will likely not work together with GFM.
+Subset compatible with GitHub Flavored Markdown ([GFM]). Some features, such as extended link attributes, will likely not work together with GFM. It'd be good if these cases doesn't introduce significant error noise in GFM.
 
 [gfm]: https://help.github.com/articles/github-flavored-markdown
 
